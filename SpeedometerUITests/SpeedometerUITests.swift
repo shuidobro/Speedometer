@@ -68,7 +68,7 @@ extension XCTestCase {
             guard error != nil else { return }
             
             let description = "\(element) does not exist after 3 seconds."
-            self.recordFailure(withDescription: description, inFile: file, atLine: line, expected: true)
+            self.recordFailure(withDescription: description, inFile: file, atLine: Int(line), expected: true)
         }
     }
 }

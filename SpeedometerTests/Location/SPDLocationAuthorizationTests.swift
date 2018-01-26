@@ -50,7 +50,7 @@ class SPDLocationAuthorizationTests: XCTestCase {
     func test_didChangeAuthorizationStatus_authorizedWhenInUse_notificationIsPosted() {
         // Arrange
         let notificationName = NSNotification.Name.SPDLocationAuthorized.rawValue
-        let _ = expectation(forNotification: notificationName, object: sut, handler: nil)
+        let _ = expectation(forNotification: NSNotification.Name(rawValue: notificationName), object: sut, handler: nil)
         
         // Act
         locationManagerMock.authorizationDelegate?.locationManager(locationManagerMock, didChangeAuthorization: .authorizedWhenInUse)
@@ -62,7 +62,7 @@ class SPDLocationAuthorizationTests: XCTestCase {
     func test_didChangeAuthorizationStatus_authorizedAlways_notificationIsPosted() {
         // Arrange
         let notificationName = NSNotification.Name.SPDLocationAuthorized.rawValue
-        let _ = expectation(forNotification: notificationName, object: sut, handler: nil)
+        let _ = expectation(forNotification: NSNotification.Name(rawValue: notificationName), object: sut, handler: nil)
         
         // Act
         locationManagerMock.authorizationDelegate?.locationManager(locationManagerMock, didChangeAuthorization: .authorizedAlways)
