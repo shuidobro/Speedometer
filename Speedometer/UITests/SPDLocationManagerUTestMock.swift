@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreLocation
-import Swinject
 
 class SPDLocationManagerUITestMock {
     weak var delegate: SPDLocationManagerDelegate?
@@ -64,14 +63,6 @@ private extension SPDLocationManagerUITestMock {
     }
 }
 
-class SPDLocationManagerUITestMockAssembly: Assembly {
-    
-    func assemble(container: Container) {
-        container.register(SPDLocationManager.self) { r in
-            return SPDLocationManagerUITestMock()
-        }
-    }
-}
 
 
 

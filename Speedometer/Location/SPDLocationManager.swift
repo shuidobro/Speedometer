@@ -8,7 +8,6 @@
 
 import Foundation
 import CoreLocation
-import Swinject
 
 protocol SPDLocationManagerDelegate: class {
     
@@ -72,16 +71,5 @@ extension SPDLocationManagerProxy: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         authorizationDelegate?.locationManager(self, didChangeAuthorization: status)
-    }
-}
-
-class SPDLocationManagerAssembly: Assembly {
-    
-    func assemble(container: Container) {
-        container.register(SPDLocationManager.self, factory: { r in
-            let locationManager = CLLocationManager()
-            
-            return SPDLocationManagerProxy(locationManager: locationManager)
-        }).inObjectScope(.weak)
     }
 }
