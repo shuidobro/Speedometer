@@ -40,16 +40,6 @@
                ReferencedContainer = "container:Speedometer.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0A4119881E92BBA300E37D76"
-               BuildableName = "SpeedometerUITests.xctest"
-               BlueprintName = "SpeedometerUITests"
-               ReferencedContainer = "container:Speedometer.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
